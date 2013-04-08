@@ -12,14 +12,14 @@ function _fancy_prompt {
   local PROMPT=""
 
   # Working directory
-  PROMPT=$PROMPT"$blue_background\w"
+  PROMPT=$PROMPT"$blue_background\w $WHITE"
 
   # Git-specific
   local GIT_STATUS=$(git status 2> /dev/null)
   if [ -n "$GIT_STATUS" ] # Are we in a git directory?
   then
     # Open paren
-    PROMPT=$PROMPT" $RED("
+    PROMPT=$PROMPT" $GREEN("
 
     # Branch
     PROMPT=$PROMPT$(git branch --no-color 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/\1/")
@@ -51,11 +51,11 @@ function _fancy_prompt {
     fi
 
     # Closing paren
-    PROMPT=$PROMPT"$RED)"
+    PROMPT=$PROMPT"$GREEN)"
   fi
 
   # Final $ symbol
-  PROMPT=$PROMPT"$BLUE\$$WHITE > "
+  PROMPT=$PROMPT"$WHITE > "
 
   export PS1=$PROMPT
 }
