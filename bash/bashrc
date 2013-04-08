@@ -1,0 +1,23 @@
+# Environment variables
+# export PATH="$PATH:~/bin:" 
+export PS1="\w > "
+export MANPATH="$MANPATH:/opt/local/man"
+export EDITOR="which mate"
+
+# DOS commands, I just can't quit you!
+alias dir="ls -lFah"
+alias md="mkdir"
+alias rd="rm -d"
+alias type="cat"
+
+# Tricks I picked up along the way
+alias lla="ls -lFah"
+alias edit="mate"
+
+# Display folder and it's content as a tree
+function tree {
+ find ${1:-.} -print | sed -e 's;[^/]*/;|__;g;s;__|; |;g'
+}
+
+# prompt
+cd ~/dev/env && . fancy-prompt.sh && cd ~/dev

@@ -1,0 +1,63 @@
+#
+# Project level settings are highest priority ("local wins"), from <project dir>/.git/config
+# Then user level settings from this file (~/.gitconfig)
+# Then system level settings, from (on OSX using macports) /opt/local/etc/gitconfig
+#
+# To use this as your user level gitconfig:
+# ln -s /path/to/gitconfig ~/.gitconfig
+#
+# To use it as your system level gitconfig:
+# sudo ln -s /path/to/gitconfig /opt/local/etc/gitconfig
+#
+
+[core]
+  # ignorecase = false
+  autocrlf = false
+  editor = "mate"
+
+[push]
+  default = matching
+
+[branch]
+  autosetupmerge = true
+                    
+[merge]
+  tool = opendiff
+
+[color]
+  ui = auto
+
+[color "branch"]
+  current = magenta reverse
+  local = magenta
+  remote = green
+
+[color "diff"]
+  meta = blue bold
+  frag = magenta bold
+  old = red bold
+  new = green bold          
+  whitespace = black
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[alias]
+  br = branch -v
+  co = checkout
+  cp = cherry-pick
+  ci = commit
+  df = diff --unified=50 --ignore-all-space  # note: --unified=<number of lines of context around diff>
+  ft = fetch
+  lv = log -p
+  pl = pull
+  pr = pull --rebase
+  ps = push origin HEAD
+  st = status
+  wip = !"git add -A; git ls-files -- deleted -z | xargs -0 git rm; git commit -m \"wip\""
+  unwip = !"git log -n 1 | grep -q -c wip && git reset HEAD~1"
+
+[user]
+	email = alan@ridlehoover.com

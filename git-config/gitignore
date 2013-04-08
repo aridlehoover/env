@@ -1,0 +1,7 @@
+.DS_Store
+.swo
+*.swp
+*.scratch.*
+log/*.log
+log/searchd.*
+tmp/**/*
