@@ -1,3 +1,6 @@
+# Unabashedly copied from Jan Ouwens at: 
+# http://www.jqno.nl/post/2012/04/02/howto-display-the-current-git-branch-in-your-prompt/
+
 function _fancy_prompt {
   local RED="\[\033[01;31m\]"
   local GREEN="\[\033[01;32m\]"
