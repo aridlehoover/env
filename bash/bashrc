@@ -10,9 +10,10 @@ export EDITOR="which mate"
 alias dir="ls -lFah"
 alias md="mkdir"
 alias rd="rm -d"
-alias type="cat"
+alias cd..="cd .."
 
 # Tricks I picked up along the way
+alias ll="ls -lFh"
 alias lla="ls -lFah"
 alias edit="mate"
 
