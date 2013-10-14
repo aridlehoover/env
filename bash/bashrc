@@ -2,20 +2,27 @@
 cd ~/dev/env/bash && . prompt.sh 
 
 # Environment variables
-export PATH="$PATH:~/bin:" 
-export MANPATH="$MANPATH:/opt/local/man"
+export PATH="/usr/local/bin:$HOME/bin:$PATH" 
+export MANPATH="/opt/local/man:$MANPATH"
 export EDITOR="which mate"
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH" 
+eval "$(rbenv init -)"
 
 # DOS commands, I just can't quit you!
 alias dir="ls -lFah"
 alias md="mkdir"
-alias rd="rm -d"
+alias rd="rm -rf"
 alias cd..="cd .."
+alias cls="clear"
 
 # Tricks I picked up along the way
 alias ll="ls -lFh"
 alias lla="ls -lFah"
 alias edit="mate"
+alias iphone="open -a iPhone\ Simulator"
+alias be="bundle exec"
 
 # Display folder and it's content as a tree
 function tree {
@@ -24,3 +31,4 @@ function tree {
 
 # Return to development directory
 cd ~/dev
+
