@@ -1,7 +1,9 @@
 .DS_Store
 .swo
+.idea/**/*
 *.swp
 *.scratch.*
 log/*.log
 log/searchd.*
 tmp/**/*
+
