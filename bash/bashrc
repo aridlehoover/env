@@ -6,6 +6,9 @@ export PATH="/usr/local/bin:$HOME/bin:$PATH"
 export MANPATH="/opt/local/man:$MANPATH"
 export EDITOR="which mate"
 
+# python
+export PATH="/Library/Frameworks/Python.framework/Versions/3.3/bin:$PATH" 
+
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH" 
 eval "$(rbenv init -)"
@@ -23,6 +26,7 @@ alias lla="ls -lFah"
 alias edit="mate"
 alias iphone="open -a iPhone\ Simulator"
 alias be="bundle exec"
+alias py="python3.3"
 
 # Display folder and it's content as a tree
 function tree {
