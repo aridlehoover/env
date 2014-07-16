@@ -13,7 +13,7 @@
 [core]
   # ignorecase = false
   autocrlf = false
-  editor = "mate"
+  editor = vim
 
 [push]
   default = matching
