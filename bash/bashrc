@@ -1,16 +1,16 @@
 # Prompt
-cd ~/dev/env/bash && . prompt.sh 
+cd ~/dev/env/bash && . prompt.sh
 
 # Environment variables
-export PATH="/usr/local/bin:$HOME/bin:$PATH" 
+export PATH="/usr/local/bin:$HOME/bin:$PATH"
 export MANPATH="/opt/local/man:$MANPATH"
 export EDITOR="which mate"
 
 # python
-export PATH="/Library/Frameworks/Python.framework/Versions/3.3/bin:$PATH" 
+export PATH="/Library/Frameworks/Python.framework/Versions/3.3/bin:$PATH"
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH" 
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # DOS commands, I just can't quit you!
@@ -26,7 +26,10 @@ alias lla="ls -lFah"
 alias edit="mate"
 alias iphone="open -a iPhone\ Simulator"
 alias be="bundle exec"
+alias cucumber="bundle exec cucumber"
 alias py="python3.3"
+alias pg="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log"
+
 
 # Display folder and it's content as a tree
 function tree {
@@ -35,4 +38,3 @@ function tree {
 
 # Return to development directory
 cd ~/dev
-
