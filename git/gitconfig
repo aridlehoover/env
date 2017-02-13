@@ -20,7 +20,7 @@
 
 [branch]
   autosetupmerge = true
-                    
+
 [merge]
   tool = opendiff
 
@@ -36,13 +36,13 @@
   meta = blue bold
   frag = magenta bold
   old = red bold
-  new = green bold          
+  new = green bold
   whitespace = black
 
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+  added = green
+  changed = yellow
+  untracked = red
 
 [alias]
   br = branch -v
