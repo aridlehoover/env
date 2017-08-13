@@ -1,13 +1,16 @@
+# SSH Keys
+ssh-add ~/.ssh/id_rsa
+
 # Prompt
 cd ~/dev/env/bash && . prompt.sh
 
 # Environment variables
-export PATH="/usr/local/bin:$HOME/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 export MANPATH="/opt/local/man:$MANPATH"
-export EDITOR="which mate"
+export EDITOR="atom"
 
 # python
-export PATH="/Library/Frameworks/Python.framework/Versions/3.3/bin:$PATH"
+export PATH="~/Library/Python/2.7/bin:$PATH"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -15,7 +18,6 @@ eval "$(rbenv init -)"
 
 # DOS commands, I just can't quit you!
 alias dir="ls -lFah"
-alias md="mkdir"
 alias rd="rm -rf"
 alias cd..="cd .."
 alias cls="clear"
@@ -26,10 +28,19 @@ alias lla="ls -lFah"
 alias edit="mate"
 alias iphone="open -a iPhone\ Simulator"
 alias be="bundle exec"
+alias bs="bundle exec spring"
 alias cucumber="bundle exec cucumber"
-alias py="python3.3"
 alias pg="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log"
 
+# Git shortcuts
+alias add="git add -p"
+alias wip="git wip"
+
+# MKDIR the way it should be
+md() {
+  mkdir $1
+  cd $1
+}
 
 # Display folder and it's content as a tree
 function tree {
