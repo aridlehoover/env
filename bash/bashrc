@@ -30,11 +30,6 @@ alias iphone="open -a iPhone\ Simulator"
 alias be="bundle exec"
 alias bs="bundle exec spring"
 alias cucumber="bundle exec cucumber"
-alias pg="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log"
-
-# Git shortcuts
-alias add="git add -p"
-alias wip="git wip"
 
 # MKDIR the way it should be
 md() {
