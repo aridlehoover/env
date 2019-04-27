@@ -1,5 +1,5 @@
 # SSH Keys
-ssh-add ~/.ssh/id_rsa
+# ssh-add ~/.ssh/id_rsa
 
 # Prompt
 cd ~/dev/env/bash && . prompt.sh
@@ -7,14 +7,11 @@ cd ~/dev/env/bash && . prompt.sh
 # Environment variables
 export PATH="$HOME/bin:$PATH"
 export MANPATH="/opt/local/man:$MANPATH"
-export EDITOR="atom"
-
-# python
-export PATH="~/Library/Python/2.7/bin:$PATH"
+export EDITOR="code"
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
 
 # DOS commands, I just can't quit you!
 alias dir="ls -lFah"
@@ -25,11 +22,7 @@ alias cls="clear"
 # Tricks I picked up along the way
 alias ll="ls -lFh"
 alias lla="ls -lFah"
-alias edit="mate"
-alias iphone="open -a iPhone\ Simulator"
 alias be="bundle exec"
-alias bs="bundle exec spring"
-alias cucumber="bundle exec cucumber"
 
 # MKDIR the way it should be
 md() {
