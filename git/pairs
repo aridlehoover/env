@@ -1,0 +1,11 @@
+# .pairs - configuration for 'git pair'
+pairs:
+  # <initials>: <Firstname> <Lastname>[; <email-id>]
+  ar: Alan Ridlehoover; alan
+  fvz: Fito von Zastrow; fito
+  fito: Fito von Zastrow; fito
+email:
+  prefix: pair
+  domain: ridlehoover.com
+  no_solo_prefix: true
+global: false  # Set to true for git-pair to change git configuration for all your projects

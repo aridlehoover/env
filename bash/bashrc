@@ -10,8 +10,8 @@ export MANPATH="/opt/local/man:$MANPATH"
 export EDITOR="code"
 
 # rbenv
-# export PATH="$HOME/.rbenv/bin:$PATH"
-# eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # DOS commands, I just can't quit you!
 alias dir="ls -lFah"
