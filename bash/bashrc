@@ -20,9 +20,8 @@ alias cd..="cd .."
 alias cls="clear"
 
 # Tricks I picked up along the way
-alias ll="ls -lFh"
-alias lla="ls -lFah"
 alias be="bundle exec"
+alias sim="/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator"
 
 # MKDIR the way it should be
 md() {
