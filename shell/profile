@@ -1,9 +1,6 @@
 # SSH Keys
 # ssh-add ~/.ssh/id_rsa
 
-# Prompt
-cd ~/dev/env/bash && . prompt.sh
-
 # Environment variables
 export PATH="$HOME/bin:$PATH"
 export MANPATH="/opt/local/man:$MANPATH"
@@ -19,9 +16,17 @@ alias rd="rm -rf"
 alias cd..="cd .."
 alias cls="clear"
 
+# For Fito
+alias gs="git status"
+
 # Tricks I picked up along the way
 alias be="bundle exec"
 alias sim="/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator"
+
+alias amend="git add .; git commit --amend --no-edit"
+alias buildn="gem uninstall pkg/navigable-0.1.0.gem; rake build; gem install pkg/navigable-0.1.0.gem"
+alias buildm="gem uninstall pkg/manufacturable-0.1.0.gem; rake build; gem install pkg/manufacturable-0.1.0.gem"
+alias rsch="git diff-tree -r --no-commit-id --name-only head origin/master | grep '\.rb$' | sed -e 's/lib/spec/g' -e 's/\.rb$/_spec\.rb/g' -e 's/_spec_spec/_spec/g' | xargs ls -1 | xargs rspec"
 
 # MKDIR the way it should be
 md() {
@@ -33,9 +38,6 @@ md() {
 function tree {
  find ${1:-.} -print | sed -e 's;[^/]*/;|__;g;s;__|; |;g'
 }
-
-# Source the git completion script
-source ~/dev/env/git/git-completion.bash
 
 # Return to development directory
 cd ~/dev

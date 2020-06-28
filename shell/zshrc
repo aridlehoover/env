@@ -1,0 +1,60 @@
+source $HOME/.profile
+
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# git_vcs_setup
+
+# sets up Window title and right prompt to show git branch and repo
+
+# slightly modified from:
+# https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Zsh
+
+autoload -Uz vcs_info
+
+# this updates just the window title
+update_terminal_window_title() {
+    printf '\e]2;%s\a' "$@"
+}
+
+# in Terminal tabs can have a title separate from the Window
+update_terminal_tab_title() {
+    printf '\e]1;%s\a' "$@"
+}
+
+
+# this function will be called to set the info
+precmd_vcs_info() {
+  vcs_info
+  update_terminal_tab_title $vcs_info_msg_0_
+}
+
+setopt prompt_subst
+# RPROMPT='%F{240}$vcs_info_msg_0_%f'
+# PROMPT='\$vcs_info_msg_0_%# '
+
+# enables checking for staged/unstaged
+zstyle ':vcs_info:*' check-for-changes true
+
+# set the format for $vcd_info_msg_0 string
+# %s: vcs service (in our case 'git')
+# %r: repository name
+# %b: branch name
+# %u: 'U' if there are unstaged files
+# %c: 'S' if there are staged, but uncommitted files
+
+zstyle ':vcs_info:git:*' formats ' (%b %u%c)'
+
+# enable just git
+zstyle ':vcs_info:*' enable git
+
+# http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Version-Control-Information
+
+autoload add-zsh-hook
+add-zsh-hook precmd precmd_vcs_info
+
+# Set up the prompt (with git branch name)
+autoload -U colors && colors
+setopt PROMPT_SUBST
+PROMPT='%{$bg[blue]%}${PWD/#$HOME/~} %{$reset_color%}%{$fg[green]%}${vcs_info_msg_0_}%{$reset_color%} > '

@@ -1,0 +1,8 @@
+source $HOME/.profile
+
+# Prompt
+source ~/dev/env/shell/prompt.sh
+
+# Source the git completion script
+source ~/dev/env/git/git-completion.bash
+
